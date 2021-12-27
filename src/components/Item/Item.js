@@ -7,10 +7,8 @@ const Item = ({ img, id }) => {
             <div className="card w-100 mt-5">
                 <Link to={`/item/${id}`}>
                     <img width="200px" src={img} alt="producto" />
+                    <button className="btn btn-outline-primary btn-block">Detalle del producto</button>
                 </Link>
-                <button className="btn btn-outline-primary btn-block">
-                    Detalle del producto
-                </button>
             </div>
         </div>
     );

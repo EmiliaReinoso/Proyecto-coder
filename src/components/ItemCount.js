@@ -1,22 +1,26 @@
 import React, { useState } from 'react'
 
-const ItemCount = ({ max, inicial}) => {
+const ItemCount = ({ stock, onAdd}) => {
     
-    const [value, setValue] = useState (inicial)
+    const [number, setNumber] = useState (1);
 
-    const handleSuma = () => {
-        value < max ? setValue (prev => prev + 1) : alert ('Compra máxima')
+    const add = () => {
+        number !== stock && setNumber (prev => prev + 1);
     }
-    const handleResta = () => {
-       value > inicial ? setValue (prev => prev - 1) : alert ('compra mínima')
+    const substract = () => {
+       number !== 0 && setNumber(prev => prev - 1);
     }
-
 
     return (
         <div>
-            <h1>{value}</h1>
-            <button onClick={handleSuma}>+</button>
-            <button onClick={handleResta}>-</button>
+            <p>{number}</p>
+            <div>
+                <button onClick={add} disabled={number === stock}>+</button>
+                <button onClick={substract}>-</button>
+                <button disabled={number === 0} onClick={() => onAdd(number)}>
+                    Agregar al carrito
+                </button>
+            </div>
         </div>
     )
 }
