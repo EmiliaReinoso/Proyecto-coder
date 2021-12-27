@@ -30,7 +30,7 @@ const ItemDetail = ({ item }) => {
                 <h2>{item.name}</h2>
                 <h3>$ {item.price}</h3>
                 <h4 style={{ width: '70%' }}>{item.description}</h4>
-                <Link to="/">Voler al home</Link>
+                <Link to="/">Volver a la tienda</Link>
             </div>
             {!goCart ? (
                 <ItemCount stock={item.stock} onAdd={onAdd} />

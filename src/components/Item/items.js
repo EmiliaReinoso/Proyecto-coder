@@ -1,13 +1,58 @@
 export const products = [
-    { id: 1, foto: '/img/1.jpg', categoria: 'remeras', name: "VueJs", price: 500},
-    { id: 1, foto: '/img/2.jpg', categoria: 'remeras', name: "Angular", price: 500},
-    { id: 1, foto: '/img/3.jpg', categoria: 'remeras', name: "React", price: 500},
-    { id: 1, foto: '/img/4.jpg', categoria: 'remeras', name: "Redux", price: 500},
-    { id: 1, foto: '/img/5.jpg', categoria: 'remeras', name: "Node.js", price: 500},
+    {
+        name: 'VueJs',
+        price: 800,
+        stock: 15,
+        id: 1,
+        img: '/img/1.jpg',
+        category: 'remeras',
+        description:
+            'Remera de algodon con estampa de VueJs',
+    },
+    {
+        name: 'Angular',
+        price: 750,
+        stock: 5,
+        id: 2,
+        img: '/img/2.jpg',
+        category: 'remeras',
+        description:
+            'Remera de algodon con estampa de Angular',
+    },
+    {
+        name: 'React',
+        price: 850,
+        stock: 4,
+        id: 3,
+        img: '/img/3.jpg',
+        category: 'remeras',
+        description:
+            'Remera de algodon con estampa de React',
+    },
+    {
+        name: 'Redux',
+        price: 780,
+        stock: 20,
+        id: 4,
+        img: '/img/4.jpg',
+        category: 'remeras',
+        description:
+            'Remera de algodon con estampa de Redux',
+    },
+    {
+        name: 'Node.js',
+        price: 800,
+        stock: 8,
+        id: 5,
+        img: '/img/5.jpg',
+        category: 'remeras',
+        description:
+            'Remera de algodon con estampa de Node.js',
+    },   
 ];
 
-export const traerProductos = new Promise((resolve, reject)=> {
-    setTimeout(()=>{
-        resolve(products)
-    }, 2000)
+export const traerProductos = new Promise((resolve, reject) => {
+    setTimeout(() => {
+        resolve(products);
+    }, 2000);
 });
