@@ -20,4 +20,4 @@ const ItemCount = ({ max, inicial}) => {
         </div>
     )
 }
-export default ItemCount
+export default ItemCount;
